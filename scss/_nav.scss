@@ -1,0 +1,79 @@
+/* Navigation */
+
+// Main Nav
+nav {
+	background: #fff;
+	border-bottom: 2px solid $hr-green;
+	font-family: 'Roboto', sans-serif;
+	font-size: 15px;
+	font-weight: 500;
+	position: relative;
+	z-index: 5;
+	#menuElem {
+		display: table;
+		height: 90px;
+		overflow: auto;
+		width: 100%;
+		@include breakpoint(large) {
+		}
+		li { 
+			display: table-cell;
+			float: none;
+			position: relative;
+			vertical-align: middle;
+			&:nth-last-child(1) ul {
+				right: 0;
+			}
+			&:hover {
+				background: $footer-green;
+				> a {
+					color: #fff;
+				}
+			}
+			a {
+				color: $black;
+				padding: 10px 12px;
+				@include breakpoint(large) {
+					padding: 10px 20px;
+				}
+			}
+			ul {
+				background: $footer-green;
+				top: 100%;
+				width: 225px;
+				li {
+					border: none;
+					display: inline-block;
+					width: 100%;
+					a {
+						color: #fff;
+						&:hover {
+							background: $mint;
+							color: $footer-green;
+						}
+					}
+				}
+			}
+		}
+		> li > a {
+			max-width: 130px;
+			text-align: center;
+		}
+	}
+}
+
+
+// Secondary Nav 
+#sideNavigation {
+	background: $blue;
+	.SectionHeaderRepeater {
+		background: $text-grey;
+		margin: 0 -15px;
+		padding: 20px;
+	}
+	#menuElem {
+		a {
+			color: #fff;
+		}
+	}
+}
