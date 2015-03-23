@@ -66,14 +66,35 @@ nav {
 // Secondary Nav 
 #sideNavigation {
 	background: $blue;
+	padding: 0;
 	.SectionHeaderRepeater {
 		background: $text-grey;
+		color: #fff;
+		font-family: 'Roboto', sans-serif;
+		font-size: 20px;
+		font-weight: 700;
 		margin: 0 -15px;
-		padding: 20px;
+		padding: 10px 20px;
 	}
 	#menuElem {
+		margin: 0;
 		a {
 			color: #fff;
+			font-family: 'Roboto', sans-serif;
+			font-weight: 700;
+		}
+		ul {
+			padding-left: 0;
+		}
+		li a:hover {
+			background: $light-blue
+		}
+		li a {
+			padding-left: 15px;
+		}
+		li li a {
+			font-weight: 400;
+			padding: 3px 25px 3px;
 		}
 	}
 }
