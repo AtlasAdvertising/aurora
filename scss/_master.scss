@@ -138,15 +138,6 @@ body {
 			height: 40px;
 			position: relative;
 		}
-		ul#utilityNav {
-			a {
-				color: $light-grey;
-				font-weight: 300;
-				&:hover {
-					color: $dark-grey;
-				}
-			}
-		}
 		ul.search-button {
 			color: $dark-grey;
 			float: left;
@@ -166,19 +157,6 @@ body {
 		ul#utilityNav li a:before {
 	    margin-right: 4px;
 	    font-family: "FontAwesome"
-		}
-		ul#utilityNav {
-			float: right;
-			li {
-				a {
-				}
-			}
-		}
-		#headerPhoneNum {
-			color: $light-grey;
-			font-weight: 500;
-			margin-left: 15px;
-			padding-top: 10px;
 		}
 	}
 }

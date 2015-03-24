@@ -1,424 +1,298 @@
 /* home */
-.homeWrapper {
-	padding: 0 !important;
-	@include breakpoint(medium) {
-		top: -37px;
-		position: relative;
-	}
-	@include breakpoint(large) {
-		background-position: 100% 423px;
-	}
 
-	.columnOuterWrapper:nth-of-type(2) {
-		margin-bottom: 40px;
+
+// Page Wrapper 
+
+.homeWrapper {
+	position: relative;
+	padding: 0;
+	width: 100%;
+}
+
+
+// Headers
+
+.homeWrapper {
+	.smart-city-header {
+		background: rgba(221,221,221,0.8);
+		padding: 10px 15px;
+		width: 100%;
+		@include breakpoint(medium) {
+			background: rgba(255,255,255,0.8);
+			height: 60px;
+		}
 		.editable-text {
-			font-family: 'Roboto', sans-serif;
-			font-weight: 300;
-			color: $text-grey;
-			font-size: 16px;
-			h2 {
-				color: $black;
-				font-family: 'Oswald', sans-serif;
-				font-size: 34px;
-				@include breakpoint(medium) {
-					font-size: 44px;
-				}
-			}
-		}
-		.map-button {
-			margin: 15px 0 10px;
+			background: transparent;
+			color: $blue !important;
 			display: inline-block;
-			@include yellow-button;
-			@include breakpoint(small) {
-				margin: 0;
-				position: absolute;
-				top: 57px;
-				left: 7%;
-				opacity: 0;
-				transition: opacity linear 0.25s;
-				@include button(#ffffff,$light-blue,$button-red,3px);
-			}
-			@include breakpoint(medium) {
-				left: 5%;
-			}
-			@include breakpoint(large) {
-				left: 15%;
-			}
-		}
-		.col-md-3:first-child {
-			text-align: center;
-			@include breakpoint(small) {
-				text-align: left;
-				img {
-					transition: opacity linear 0.25s;
-				}
-				&:hover {
-					img {
-						opacity: 0.5;
-					}
-					.map-button {
-						opacity: 1.0;
-					}
-				}
-			}
-		}
-		.col-md-4 {
-			padding-right: 0;
-		}
-		#p_lt_wpzPagePlaceholder_pageplaceholder_p_lt_wpzHero_ColumnsSmartCity_ColumnsSmartCity_l1_Link_SmartCity2_btnElem_hyperLink {
-			display: block;
+			font-family: 'Forza A', 'Forza B';
+			font-size: 28px !important;
+			padding: 0 !important;
 			&:hover {
-				opacity: 0.8;
-			}
-		}
-		.welcome-button {
-			@include button(#fff,$blue,$light-blue,3px);
-			display: inline-block;
-			margin-top: 15px;
-		}
-		.widget-block {
-			.widget-title {
-				font-family: 'TideSans-500Dudette';
-				font-size: 20px;
-				font-weight: bold;
-				color: $black;
-				line-height: 24px;
-				border-top: 4px solid $black;
-				margin-top: 20px;
-				padding-top: 10px;
-				@include breakpoint(small) {
-					border-top: 4px solid $light-blue;
-					font-family: 'TideSans-300LilKahuna';
-					font-size: 16px;
-					color: $dark-grey;
-					margin-bottom: 10px;
-				}
-				a {
-					display: block;
-					color: $light-blue;
-					font-size: 15px;
-					font-family:'Avenir LT W01 95 Black';
-					font-weight: normal;
-					@include breakpoint(small) {
-						display: inline;
-						float: right;
-						font-family: Arial, sans-serif;
-						font-size: 14px;
-						&:hover {
-							color: $button-red;
-							text-decoration: none;
-						}
-					}
-				}
-			}
-			.ConnectWithUs {
-				.Staff {
-					font-family: Arial, sans-serif;
-					.Controls {
-						.button {
-							background: $light-blue;
-						}
-					}
-					.FirstName,
-					.LastName {
-						font-size: 18px;
-						font-weight: bold;
-						color: $text-grey;
-						display: inline;
-					}
-					.LastName {
-						
-					}
-					.Title {
-						font-size: 11px;
-						color: #737373;
-					}
-				}
+				color: $blue;
 			}
 		}
 	}
-	.columnOuterWrapper:nth-of-type(3) {
-		margin-bottom: 25px;
+}
+
+
+// Three Widget Area 
+
+.homeWrapper {
+	.columnOuterWrapper {
+		position: absolute;
+		top: 150px;
+		width: 100%;
 		@include breakpoint(medium) {
-			margin: auto;
+			bottom: 35px;
+			top: auto;
+		}
+		.row {
+			@include breakpoint(medium) {
+				-webkit-align-items: flex-end;
+				align-items: flex-end;
+				display: -webkit-flex;
+				display: -ms-flex;
+				display: flex;
+			}
 		}
 		.col-md-4 {
-			margin-bottom: 25px;
+			margin-bottom: 45px;
 			@include breakpoint(medium) {
-				margin-bottom: 25px;
+				display: -webkit-flex;
+				display: -ms-flex;
+				display: flex;
+				-webkit-flex-direction: column;
+				flex-direction: column;
+				margin-bottom: 0;
+				max-height: 60px;
+				height: 60px;
+				overflow: hidden;
+				transition: max-height 0.5s, margin 0.5s;
 			}
-		}
-		.mCSB_scrollTools .mCSB_draggerRail {
-			background: #E4E4E4;
-		}
-		.widget-title {
-			@extend %home-page-header;
-			a {
-				bottom: -50px;
-				display: none;
-				left: 15px;
-				position: absolute;
-				text-transform: lowercase;
-				@include breakpoint(medium) {
-					background: none;
-					display: inline-block;
-					float: right;
-					font-family: Arial, sans-serif;
-					font-size: 11px;
-					padding: 22px 0 0;
-					position: static;
-					&:hover {
-						background: none;
-						color: $black;
-					}
+			a.learn-more,
+			a#p_lt_wpzPagePlaceholder_pageplaceholder_p_lt_wpzHero_ColumnsSmartCity_ColumnsSmartCity_l1_Link_SmartCity_btnElem_hyperLink {
+				color: #fff;
+				font-size: 0;
+				line-height: 50px;
+				transition: height 0.5s;
+				span {
+					transition: font-size 0.5s;
 				}
-			}
-		}
-		.editable-text {
-			font-family: Arial, sans-serif;
-			font-size: 13px;
-			line-height: 1.5;
-			color: #ffffff;
-			h3 {
-				font-family: Arial, sans-serif;
-				font-weight: bold;
-				font-size: 14px;
-			}
-			ul {
-				padding: 5px 16px;
-				li {
-					padding: 0 0 5px;
-					@include breakpoint(medium) {
-						padding: 0;
-					}
-				}
-				a {
-					color: #ff941f;
-					font-weight: bold;
-					&:hover {
-						color: #EF4036;
-						text-decoration: none;
-					}
-				}
-			}
-		}
-		a.view-all {
-			@include button(#fff,$blue,$light-blue,3px);
-			bottom: -50px;
-			display: inline-block;
-			left: 15px;
-			position: absolute;
-			@include breakpoint(small) {
-				background: none;
-				color: $blue;
-				font-family: Arial, sans-serif;
-				font-size: 11px;
-				left: 86%;
-				padding: 0;
-				position: absolute;
-				text-transform: none;
-				top: 20px;
 				&:hover {
-					background: none;
-					color: $black;
+					color: $light-grey;
+				}
+				@include breakpoint(medium) {
+					height: 0;
+					padding: 0;
+					transition: height 0.5s;
 				}
 			}
 		}
-		.news-repeater {
-			margin-bottom: 80px;
-			@include breakpoint(small) {
-				margin: 0;
-			}
-		}
-		.properties-list {
-			color: $text-grey;
-			font-family: 'Roboto', sans-serif;
-			font-size: 13px;
-			list-style: none;
-			margin: 20px 0 0;
+		ul.news-list,
+		.editable-text,
+		.widget-block {
+			color: $black;
+			font-size: 12px;
+			margin: 0;
 			padding: 0;
-			overflow: hidden;
-			@include breakpoint(small) {
-				height: 290px;
+			a {
+				color: #fff;
+				&:hover {
+					color: #fff;
+				}
 			}
-			.featured-property {
-				margin: 0 0 25px;
-			}
-			.title {
-				font-size: 14px;
-				font-weight: 700;
-			}
-			.featured-property-image {
-				clear: both;
-				float: left;
-				margin-right: 15px;
+			@include breakpoint(medium) {
+				font-size: 0;
+				height: 0;
+				transition: height 0.5s, padding 0.5s;
 			}
 		}
 		ul.news-list {
-			color: $text-grey;
-			font-family: 'Roboto', sans-serif;
-			font-size: 13px;
-			list-style: none;
-			margin: 20px 0 85px;
-			padding: 0;
-			overflow: hidden;
-			@include breakpoint(small) {
-				height: 290px;
-			}
-			li.news-item {
-				margin-bottom: 20px;
-				&:not(:first-child) {
-					display: none;
-					@include breakpoint(small) {
-						display: block;
-					}
-				}
-			}
-			.date {
-				font-size: 12px;
-				font-weight: 700;
-			}
-			.title {
-				color: $blue;
-				font-size: 20px;
-				font-weight: 700;
-				line-height: 22px;
-				margin: 5px 0 10px;
-				a {
-					color: $blue;
-				}
-			}
-			.description {
-				line-height: 1.25;
-				margin: 0 0 10px;
-			}
-			a.link {
-				color: $blue;
-				&:hover {
-					color: $light-blue;
-					text-decoration: none;
-				}
-			}
+			margin: 0;
 		}
-		.SuccessStories_RegionalHighlights {
-			height: 295px;
-			.successStoryContent {
-				font-family: 'Roboto', sans-serif;
-				.Title {
-					color: $blue;
-					float: left;
-					font-size: 16px;
-					font-weight: bold;
-					padding-top: 12px;
-				}
-				.Description {
-					color: $text-grey;
-					font-size: 13px;
-					float: left;
-					a {
-						color: $blue;
-						&:hover {
-							color: $black;
-							text-decoration: none;
-						}
-					}
-				}
-			}
+		.widget-block {
+			background: #fff;
 		}
+
 	}
-	.columnOuterWrapper:nth-of-type(4) {
+}
+
+
+
+
+// Web Part Hover
+.homeWrapper .columnOuterWrapper .col-md-4:hover {
+	height: auto;
+	max-height: 700px;
+	a span {
+		font-size: 14px;
+	}
+	.editable-text {
 		@include breakpoint(medium) {
-			margin: auto;
+			font-size: 12px;
+			padding: 20px 15px;
+			height: 210px;
 		}
-		.editable-text {
-			@extend %home-page-header;
-		}
-		img {
-			margin: 0 auto;
-		}
-		.col-md-4 {
-			.widget-title {
-				border-top: none;
-			}
-		}
-	}
-	.partner-carousel {
-		margin: 15px 0 30px;
-		padding: 0 25px;
-		.prev-button,
-		.next-button {
-			font-size: 26px;
-		}
-		.prev-button {
-			left: 0;
-		}
-		.next-button {
-			right: 0; 
-		}
-	}
-}
-
-#connect-wrapper {
-	background: #f5f5f5;
-	padding-top: 15px;
-	@include breakpoint(large) {
-		padding-top: 20px;
-	}
-}
-
-.connect-text {
-	@extend %home-page-header;
-	border: 0;
-	font-size: 22px;
-	padding-left: 30px;
-	@include breakpoint(large) {
-		font-size: 26px;
-	}
-	&:before {
-		color: $blue;
-		content: '\f0da';
-		font-family: 'FontAwesome';
-		margin-right: 10px;
-	}
-}
-
-.connect-social-icons {
-	float: left;
-	font-size: 19px;
-	text-align: center;
-	@include breakpoint(small) {
-		text-align: right;
-	}
-	ul {
-		display: inline-block;
-		list-style: none;
-		padding: 0;
-		li {
-			float: left;
-		}
-	}
-	li a {
-		color: $icon-grey;
-		display: inline-block;
-		font-size: 30px;
-		margin: 0 10px 0 0;
-		padding-top: 2px;
 		@include breakpoint(large) {
-			padding-top: 7px;
+			height: 168px;
 		}
-		&:hover {
-			color: $dark-grey;
+	}
+	a#p_lt_wpzPagePlaceholder_pageplaceholder_p_lt_wpzHero_ColumnsSmartCity_ColumnsSmartCity_l1_Link_SmartCity_btnElem_hyperLink {
+		height: 50px;
+	}
+	.editable-text, 
+	.learn-more,
+	.teaser-wrapper,
+	.widget-block {
+		@include breakpoint(medium) {
+			display: block !important;
 		}
+	}
+	ul.news-list {
+		background: $black;
+		display: block !important;
+		height: 260px;
+		@include breakpoint(large) {
+			height: auto;
+		}
+	}
+	.widget-block {
+		font-size: 12px;
+		height: auto;
+		padding: 20px 15px 55px;
+	}
+	.SidebarText a {
+	  display: block;
+	  position: absolute;
+	  bottom: 0;
+	  left: 0;
+	  width: 50%;
+	  background: #5AB2E8;
+	  line-height: 50px;
+	  height: 50px;
+	  text-align: center;
 	}
 }
 
-.HeroImageSlider .rsDefault, .HeroImageSlider .rsDefault .rsOverflow, .HeroImageSlider .rsDefault .rsSlide, .HeroImageSlider .rsDefault .rsVideoFrameHolder, .HeroImageSlider .rsDefault .rsThumbs {
-    width: 100% !important;
-    min-height: 350px;
+.homeWrapper .columnOuterWrapper .col-md-4:nth-child(2) .SidebarText a {
+  width: 100%;
 }
 
-.homeWrapper .HeroImageSlider .rsDefault .rsBullets {
-	@media (max-width: 768px) {
+#p_lt_wpzPagePlaceholder_pageplaceholder_p_lt_wpzHero_ColumnsSmartCity_ColumnsSmartCity_l1_Link_SmartCity1_btnElem_hyperLink {
+	display: none;
+}
+
+
+// View All Links
+
+.col-md-4:hover #p_lt_wpzPagePlaceholder_pageplaceholder_p_lt_wpzHero_ColumnsSmartCity_ColumnsSmartCity_l1_Link_SmartCity1_btnElem_hyperLink {
+  color: #fff;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 15px;
+  width: 50%;
+  background: $light-blue;
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+}
+
+.view-all-button {
+	display: none;
+}
+
+.col-md-4:hover .view-all-button {
+  color: #fff;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+  width: 90%;
+  background: $black;
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+}
+
+a#p_lt_wpzPagePlaceholder_pageplaceholder_p_lt_wpzHero_ColumnsSmartCity_ColumnsSmartCity_l2_Link_SmartCity1_btnElem_hyperLink {
+	color: $black;
+	position: absolute;
+	right: 35px;
+	top: 5px;
+}
+
+a#p_lt_wpzPagePlaceholder_pageplaceholder_p_lt_wpzHero_ColumnsSmartCity_ColumnsSmartCity_l1_Link_SmartCity_btnElem_hyperLink {
+	color: #fff;
+	display: block;
+	padding: 15px 0;
+	text-align: center;
+	text-transform: uppercase;
+	width: 100%;
+}
+
+
+// News Widget
+.homeWrapper {
+.news-item {
+	a.link {
+		// display: none;
+	}
+}
+
+ul.news-list {
+	padding: 0;
+	.mCSB_container {
+		padding: 0;
+	}
+	li {
+		padding: 20px 15px;
+		margin: 0;
+	}
+	li:hover {
+	}
+	li:nth-child(1) {
+		border-bottom: 2px dashed $blue;
+	}
+	li:nth-child(n+3) {
 		display: none;
 	}
+	.title {
+		font-size: 16px;
+		font-weight: 700;
+		&:hover {
+			color: $light-blue;
+		}
+	}
+	.date {
+		color: #fff;
+		font-size: 12px;
+	}
+	.description {
+		color: #fff;
+		font-size: 12px;
+	}
 }
+
+}
+
+
+// Open Content Area
+
+.homeWrapperBottom {
+	padding: 50px 0;
+	text-align: center;
+	.smart-city-header .editable-text {
+		font-family: 'Forza A', 'Forza B';
+		font-size: 28px
+	}
+	.editable-text {
+		font-family:'Neue Helvetica W01';
+		font-size: 12px;
+		margin-bottom: 15px;
+	}
+	a#p_lt_wpzPagePlaceholder_pageplaceholder_p_lt_wpzOpenContent_ColumnsSmartCity1_ColumnsSmartCity1_l1_Link_SmartCity_btnElem_hyperLink {
+		@include button(#fff,$light-blue,$blue,5px)
+	}
+}	

@@ -13,9 +13,11 @@
 }
 
 @mixin button($text,$color,$hover,$border-radius) {
-	color: $text;
 	background: $color;
 	border-radius: $border-radius;
+	color: $text;
+	cursor: pointer;
+	display: inline-block;
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
 	padding: 10px 25px;

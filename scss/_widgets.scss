@@ -24,25 +24,26 @@
 	}
 }
 
-.widget-block {
-	.widget-title {
-		@extend %widget-title;
-		a {
-			display: block;
-			font-family: Arial, sans-serif;
-			font-size: 12px;
-			color: $light-blue;
-			&:hover {
-				color: $footer-green;
-				text-decoration: none;
+#sideWidgets {
+	.widget-block {
+		.widget-title {
+			@extend %widget-title;
+			a {
+				display: block;
+				font-family: Arial, sans-serif;
+				font-size: 12px;
+				color: $light-blue;
+				&:hover {
+					color: $footer-green;
+					text-decoration: none;
+				}
 			}
 		}
-	}
-	h2 {
-		@extend %widget-title;
+		h2 {
+			@extend %widget-title;
+		}
 	}
 }
-
 
 // Widget Links
 
