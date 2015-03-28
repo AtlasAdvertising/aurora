@@ -53,6 +53,10 @@
 	}
 }
 
+.view-all-link {
+	display: none;
+}
+
 
 // Widget Content
 
@@ -120,7 +124,7 @@
 					}
 					a {
 						font-family: Arial, sans-serif;
-						font-size: 11px;
+						font-size: 13px;
 						color: $light-blue;
 						&:hover {
 							color: $black;
