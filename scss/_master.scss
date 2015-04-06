@@ -169,8 +169,10 @@ body {
 	}
 	img {
 		float: left;
-		height: 65%;
 		padding-top: 6px;
+		@include breakpoint(small) {
+			height: 65%;
+		}
 		@include breakpoint(medium) {
 			height: auto;
 			padding-top: 0;
