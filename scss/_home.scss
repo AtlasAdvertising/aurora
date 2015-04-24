@@ -40,11 +40,10 @@
 
 .homeWrapper {
 	.columnOuterWrapper {
-		position: absolute;
-		top: 150px;
 		width: 100%;
 		@include breakpoint(medium) {
 			bottom: 35px;
+			position: absolute;
 			top: auto;
 		}
 		.row {
@@ -88,6 +87,9 @@
 					transition: height 0.5s;
 				}
 			}
+		}
+		.col-md-4:last-child {
+		  margin-bottom: 0;
 		}
 		ul.news-list,
 		.editable-text,
@@ -150,10 +152,11 @@
 		}
 	}
 	ul.news-list {
-		background: $black;
-		display: block !important;
-		height: 260px;
-		padding-bottom: 50px !important;
+		@include breakpoint(medium) {
+			display: block !important;
+			height: 260px;
+			padding-bottom: 50px !important;
+		}
 		@include breakpoint(large) {
 			height: auto;
 		}
@@ -164,57 +167,142 @@
 		padding: 20px 15px 55px;
 	}
 	.SidebarText a {
+	  background: $light-blue;
 	  display: block;
-	  position: absolute;
-	  bottom: 0;
-	  left: 0;
-	  width: 50%;
-	  background: #5AB2E8;
-	  line-height: 50px;
 	  height: 50px;
-	  text-align: center;
+	  line-height: 50px;
+	  margin-right: 1%;
+	  @include breakpoint(small) {
+		  background: $black;
+	  }
+	  &:hover {
+		  background: $light-blue;
+	  }
 	}
+}
+
+.homeWrapper .columnOuterWrapper .col-md-4 .SidebarText a {
+  background: $light-blue;
+  @include breakpoint(medium) {
+	  background: $black;
+  }
 }
 
 .homeWrapper .columnOuterWrapper .col-md-4:nth-child(2) .SidebarText a {
   width: 100%;
 }
 
+
+// Pre-hover states for three content areas
+
+.columnOuterWrapper ul.news-list {
+		display: block !important;
+		height: auto;
+		padding-bottom: 50px;
+		@include breakpoint(medium) {
+			height: 0;
+			padding: 0;
+		}
+	}
+
+.columnOuterWrapper .col-md-4 .SidebarText a {
+	height: 50px;
+  bottom: 0;
+  display: block;
+  font-weight: 400;
+  left: 0;
+  line-height: 50px;
+  position: absolute;
+  text-align: center;
+  width: 50%;
+	@include breakpoint(medium) {
+		display: none;
+		height: 0;
+		line-height: 0;
+	}
+}
+
+.columnOuterWrapper .col-md-4 .widget-block {
+		background: $dark-grey;
+		color: #fff;
+		font-size: 12px;
+		height: auto;
+		padding: 20px 15px 55px;
+		@include breakpoint(medium) {
+			background: #fff;
+			color: $black;
+			height: 0;
+			padding: 0;
+		}
+		h2 {
+			display: none;
+		}
+		.SidebarImage {
+			text-align: center;
+			width: 100%;
+		}
+	}
+
 #p_lt_wpzPagePlaceholder_pageplaceholder_p_lt_wpzHero_ColumnsSmartCity_ColumnsSmartCity_l1_Link_SmartCity1_btnElem_hyperLink {
-	display: none;
+	background: $light-blue;
+	height: 50px;
+  bottom: 0;
+  color: #fff;
+  display: block;
+  line-height: 50px;
+  position: absolute;
+  right: 15px;
+  text-align: center;
+  width: 46%;
+	@include breakpoint(medium) {
+  	background: $black;
+		display: none;
+		height: 0;
+		line-height: 0;
+	}
+}
+
+.col-md-4 .view-all-button {
+  background: $light-blue;
+  bottom: 0;
+  color: #fff;
+  display: block;
+  height: 50px;
+  left: 15px;
+  line-height: 50px;
+  text-align: center;
+  width: 100%;
+  @include breakpoint(medium) {
+	  position: absolute;
+	  background: $black;
+  	height: 0;
+	  width: 92%;
+  }
+  &:hover {
+	  background: $light-blue;
+  }
+}
+
+.columnOuterWrapper .col-md-4:first-child .SidebarText a {
+  border-right: solid 3px $black;
 }
 
 
 // View All Links
 
 .col-md-4:hover #p_lt_wpzPagePlaceholder_pageplaceholder_p_lt_wpzHero_ColumnsSmartCity_ColumnsSmartCity_l1_Link_SmartCity1_btnElem_hyperLink {
-  color: #fff;
   display: block;
-  position: absolute;
-  bottom: 0;
-  right: 15px;
-  width: 50%;
-  background: $light-blue;
   line-height: 50px;
   height: 50px;
-  text-align: center;
+  &:hover {
+	  background: $light-blue;
+  }
 }
 
 .view-all-button {
-	display: none;
-}
-
-.col-md-4:hover .view-all-button {
-  color: #fff;
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 15px;
-  width: 92%;
-  background: $black;
-  line-height: 50px;
-  height: 50px;
-  text-align: center;
+	@include breakpoint(medium) {
+		display: none;
+	}
 }
 
 a#p_lt_wpzPagePlaceholder_pageplaceholder_p_lt_wpzHero_ColumnsSmartCity_ColumnsSmartCity_l2_Link_SmartCity1_btnElem_hyperLink {
@@ -233,6 +321,11 @@ a#p_lt_wpzPagePlaceholder_pageplaceholder_p_lt_wpzHero_ColumnsSmartCity_ColumnsS
 	width: 100%;
 }
 
+.col-md-4:hover .view-all-button {
+  display: block;
+  height: 50px;
+}
+
 
 // News Widget
 .homeWrapper {
@@ -243,6 +336,7 @@ a#p_lt_wpzPagePlaceholder_pageplaceholder_p_lt_wpzHero_ColumnsSmartCity_ColumnsS
 }
 
 ul.news-list {
+	background: $dark-grey;
 	padding: 0;
 	.mCSB_container {
 		padding: 0;

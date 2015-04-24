@@ -13,6 +13,9 @@ header {
 		background: none !important;
 		color: #fff;
 		padding: 0 5px 12px;
+		&:hover {
+			color: $light-blue;
+		}
 	}
 }
 
@@ -31,6 +34,9 @@ header {
 	}
 	a {
 		color: #fff;
+		&:hover {
+			color: $light-blue !important;
+		}
 	}
 }
 
@@ -39,6 +45,9 @@ header {
 	display: inline-block;
   vertical-align: top;
   padding-top: 15px;
+  &:hover {
+  	color: $light-blue;
+  }
 }
 
 #utilityNav {
@@ -46,6 +55,9 @@ header {
 	float: none;
 	a {
 		color: #fff;
+		&:hover {
+			color: $light-blue;
+		}
 	}
 }
 
@@ -53,12 +65,19 @@ header {
 // Main Nav
 nav {
 	background: #fff;
-	border-bottom: 2px solid $hr-green;
 	font-family: 'Roboto', sans-serif;
 	font-size: 15px;
 	font-weight: 700;
 	position: relative;
 	z-index: 5;
+	&:after {
+		border-bottom: 2px solid #003c5c;
+		content: " ";
+		height: 4px;
+		width: 100%;
+	  background: transparent;
+	  position: absolute;
+	}
 	#menuElem {
 		display: table;
 		height: 90px;
@@ -75,7 +94,7 @@ nav {
 				right: 0;
 			}
 			&:hover {
-				background: $footer-green;
+				background: $header-blue;
 				> a {
 					color: #fff;
 				}
@@ -88,7 +107,7 @@ nav {
 				}
 			}
 			ul {
-				background: $footer-green;
+				background: $header-blue;
 				top: 100%;
 				width: 225px;
 				li {
@@ -97,9 +116,9 @@ nav {
 					width: 100%;
 					a {
 						color: #fff;
+						font-weight: 400;
 						&:hover {
-							background: $mint;
-							color: $footer-green;
+							background: $light-blue;
 						}
 					}
 				}
@@ -118,8 +137,8 @@ nav {
 	background: $blue;
 	padding: 0;
 	.SectionHeaderRepeater {
-		background: $text-grey;
-		color: #fff;
+		background: #EEF1F2;
+		color: $black;
 		font-family: 'Roboto', sans-serif;
 		font-size: 20px;
 		font-weight: 700;

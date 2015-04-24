@@ -3,6 +3,9 @@
 #secondaryWrapper.media-center-wrapper {
 	background: #fff;
 	padding: 0 0 80px;
+	&:after {
+		display: none;
+	}
 	.secondary-content {
 		margin-top: 35px;
 	}
@@ -20,15 +23,19 @@
 	}
 	.webpart-title,
 	.twitter-wrapper h2 {
-		border-bottom: 4px solid $hr-green;
+		border-bottom: 4px solid $text-grey;
 		color: $black;
-		font-family: 'Oswald', sans-serif;
+		font-family: 'Roboto', sans-serif;
 		font-size: 26px;
 		line-height: 1.25;
 		margin-bottom: 20px;
 		margin-top: 0;
 		padding-bottom: 10px;
 	}
+}
+
+.media-column-wrapper {
+  margin-bottom: 35px;
 }
 
 
@@ -63,39 +70,60 @@
 
 // Events
 
-.events-widget ul,
-ul.events-list {
-	list-style: none;
-	padding: 0;
-	li.event {
-		margin-bottom: 25px;
-		.Date {
-			@extend %date;
-		}
-		.Title {
-			@extend %header;
-			font-size: 25px;
-			line-height: 25px;
-			margin-bottom: 7px;
-		}
-		.Description {
-			color: $text-grey;
-			font-family: 'Roboto', sans-serif;
-			font-size: 14px;
-			line-height: 1.5;
-			margin-bottom: 5px;
+	#events-list {
+		list-style: none;
+		padding: 0;
+		li.event {
+			margin-bottom: 25px;
+			.Date {
+				@extend %date;
+			}
+			.Title {
+				@extend %header;
+				font-size: 25px;
+				line-height: 25px;
+				margin-bottom: 5px;
+			}
+			.Description {
+				font-family: Arial, sans-serif;
+				font-size: 13px;
+				color: #222222;
+			}
 		}
 	}
-}
 
+
+// Press releases
+#press-list {
+			list-style: none;
+		padding: 0;
+		li {
+			margin-bottom: 25px;
+			.date {
+				@extend %date;
+			}
+			.pressTitle {
+				@extend %header;
+				color: $light-blue;
+				font-size: 25px;
+				line-height: 25px;
+				margin-bottom: 5px;
+				&:hover {
+					color: $black;
+				}
+			}
+			.summary {
+				font-family: Arial, sans-serif;
+				font-size: 13px;
+				color: #222222;
+			}
+		}
+}
 
 // Show More/Less Buttons 
 .show-more.button,
 .show-less.button {
-	@include button(#fff,$green,$footer-green,3px);
+	@include button(#fff,$light-blue,$blue,5px);
 	cursor: pointer;
 	display: inline-block;
-	&:hover {
-		color: #fff;
-	}
 }

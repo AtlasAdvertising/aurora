@@ -28,7 +28,7 @@ body {
 			&:before {
 				content: "\f0c9";
 				font-family: "FontAwesome";
-				color: $light-blue;
+				color: $blue;
 				font-size: 28px;
 			}
 			@include breakpoint(small) {
@@ -170,20 +170,18 @@ body {
 	img {
 		float: left;
 		padding-top: 6px;
-		@include breakpoint(small) {
-			height: 65%;
-		}
+		width: 200px;
 		@include breakpoint(medium) {
 			height: auto;
 			padding-top: 0;
-			width: 42%;
+			width: 290px;
 		}
 		@include breakpoint(large) {
-			width: auto;
 		}
 	}
 	a {
 		display: table-cell;
+		max-width: 242px;
 		vertical-align: middle;
 	}
 }

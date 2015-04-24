@@ -1,21 +1,53 @@
 /* secondary */
+
+// Main nav
+
+nav#main-navigation.secondary {
+  padding-bottom: 4px;
+}
+
+
+// Header image
+
+#header-image-wrapper {
+  background: #fff;
+}
+
+#secondaryWrapper #secondaryHeaderImage {
+  position: relative;
+  z-index: 4;
+  &.no-image {
+  	display: none;
+  }
+}
+
 div#secondaryWrapper {
-	background: $text-grey;
 	min-height: 0;
 	padding-top: 0;
 	padding-bottom: 0;
 	@include breakpoint(medium) {
+		background: #EEF1F2;;
 		position: relative;
 	}
 	#secondaryHeaderImage {
+		height: 300px;
+		overflow: hidden;
 		position: relative;
 		img {
-			@media (max-width: 400px) {
-				min-height: 125px;
-				min-width: 480px;
-				left: -20%;
-				position: relative;
-			}
+	    left: 50%;  
+      min-height: 300px;
+		  min-width: 800px;
+	    position: absolute;
+	    top: 50%;
+	    -webkit-transform: translateX(-50%) translateY(-50%);
+	    transform: translateX(-50%) translateY(-50%);
+			width: 100%;
+			// @media (max-width: 400px) {
+			// 	min-height: 125px;
+			// 	min-width: 480px;
+			// 	left: -20%;
+			// 	position: relative;
+			// }
 		}
 		.SectionHeaderRepeater {
 			background: rgba(254,254,254,0.9);
@@ -52,13 +84,18 @@ div#secondaryWrapper {
 			font-size: 16px;
 			font-weight: 300;
 			line-height: 1.25;
+			h1, h2, h3, h4, h5, h6 {
+				font-weight: 700;
+			}
 			h1 {
 				color: $black;
+				font-family: 'Forza A', 'Forza B';
 				font-size: 32px;
 				margin-top: 5px;
 			}
 			h2 {
 				color: $black;
+				font-family: 'Forza A', 'Forza B';
 				font-size: 24px;
 			}
 			h3 {

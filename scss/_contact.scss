@@ -56,13 +56,16 @@
 		.staffLinkedin,
 		.staffPhone,
 		.staffEmail {
-			display: inline-block;
+			margin-bottom: 5px;
+		}
+		img {
+		  max-width: 200px;
 		}
 	}
 }
 
 #contactContent #contactFormWrapper .FormButton {
-	@include button(#fff,$green,$footer-green,3px);
+	@include button(#fff,$light-blue,$blue,3px);
 	border: 0;
 	outline: 0;
 }
