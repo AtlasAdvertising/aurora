@@ -218,7 +218,11 @@ div#secondaryWrapper {
 	}
 }
 
-
+.EditMode{ 
+	.no-image{
+  		display: block !important;
+ 	}
+}
 /* Buttons */
 
 .secondary-button {
